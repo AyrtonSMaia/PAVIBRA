@@ -1,0 +1,3 @@
+import {getAccess,denied} from '../../../lib/access';
+import {database} from '../../../lib/platform';
+export async function GET(){const u=await getAccess();if(!u?.canManage)return denied();const db=database().raw;const data={schema:'pavibra.full-backup',version:1,exportedAt:new Date().toISOString(),orders:db.prepare('SELECT * FROM purchase_orders').all(),supplies:db.prepare('SELECT * FROM supply_versions ORDER BY revision DESC LIMIT 1').get(),users:db.prepare('SELECT * FROM purchase_users').all(),attachments:db.prepare('SELECT * FROM purchase_attachments').all()};return Response.json(data,{headers:{'Cache-Control':'no-store','Content-Disposition':'attachment; filename="PAVIBRA_Backup.json"'}})}

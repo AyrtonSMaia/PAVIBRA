@@ -1,0 +1,2 @@
+export type Item = {id:string;description:string;spec:string;category:string;unit:string;quantity:number;received:number;price:string;pq:string;structure:string;materialId:string};
+export type Order = {id:string;code:string;title:string;work:string;project:string;revision:string;front:string;need:string;priority:string;status:string;requester:string;buyer:string;supplier:string;purchase:string;delivery:string;nf:string;notes:string;items:Item[];history:{date:string;actor:string;action:string}[];version:number;updatedAt:string};

@@ -1,0 +1,1 @@
+import AuthForm from '../login/auth-form';export const dynamic='force-dynamic';export default async function Page({searchParams}:{searchParams:Promise<{token?:string}>}){return <AuthForm mode="activate" token={(await searchParams).token||''}/>}

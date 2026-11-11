@@ -1,0 +1,20 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1794332018638,
+      "tag": "0000_dear_power_pack",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1794336745629,
+      "tag": "0001_magical_doctor_strange",
+      "breakpoints": true
+    }
+  ]
+}
